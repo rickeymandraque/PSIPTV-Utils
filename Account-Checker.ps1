@@ -44,7 +44,7 @@ echo ""
 echo "l'url du panneau : $proto://$IPTVhost/panel_api.php?username=$username&password=$password"
 
 
-$full_panel = "${proto}://$IPTVhost/panel_api.php?username=$username&password=$password"
+$full_panel = "${proto}://${IPTVhost}:${IPTVport}/panel_api.php?username=$username&password=$password"
 $Online_Infos = Invoke-WebRequest $full_panel | ConvertFrom-Json
 
 $OnlineUser_Info = $Online_Infos.user_info
