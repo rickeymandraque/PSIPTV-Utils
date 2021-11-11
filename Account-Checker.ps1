@@ -41,7 +41,7 @@ echo " ------------------------------------- "
 echo ""
 echo ""
 
-echo "l'url du panneau : $proto://$IPTVhost/panel_api.php?username=$username&password=$password"
+# echo "l'url du panneau : $proto://$IPTVhost/panel_api.php?username=$username&password=$password"
 
 
 $full_panel = "${proto}://${IPTVhost}:${IPTVport}/panel_api.php?username=$username&password=$password"
