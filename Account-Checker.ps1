@@ -14,13 +14,26 @@ $proto = $uri.Scheme
 $ParsedQueryString = [System.Web.HttpUtility]::ParseQueryString($uri.Query)
 
 
+# si l'url n'est pas une requette php"
 if(!$query) {
-$username = $Segments[1]
-$password = $Segments[2]
+# si le 1er segment est = à live
+if ($Segments[1].TrimEnd('/') -eq "live"){
+
+# alors le nom d'utilisateur sera au 2eme segment
+$username = $Segments[2].TrimEnd('/')
+# et le MDP au 3eme
+$password = $Segments[3].TrimEnd('/')
+}
+else
+{
+# sinon le nom d'utillisateur et le MDP sera au 1er eet 2eme segment
+$username = $Segments[1].TrimEnd('/')
+$password = $Segments[2].TrimEnd('/')
+}
 }
 
 
-
+# sinon, on prend la requete username et password
 else {
 $username = $ParsedQueryString['username']
 $password = $ParsedQueryString['password']
@@ -41,7 +54,6 @@ echo " ------------------------------------- "
 echo ""
 echo ""
 
-# echo "l'url du panneau : $proto://$IPTVhost/panel_api.php?username=$username&password=$password"
 
 
 $full_panel = "${proto}://${IPTVhost}:${IPTVport}/panel_api.php?username=$username&password=$password"
