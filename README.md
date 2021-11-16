@@ -19,3 +19,22 @@ prochainement:
 Ajout d'une option pour verifier depuis un fichier local pour eviter les trop nombreuse requete depuis les serveurs.
 
 Derniere version: 0.2.0a
+
+
+# News
+##### le 16/11/2021
+- M3UGrabber en cours de devellopement
+- Auto-Update en cours de devellopement (finalisation)
+
+#### M3UGrabber
+
+##### Fonctionnalités :
+
+- Télécharge les playlists au format M3U
+- Force la construction de playlists grace au JSON du serveur distant. ( Utile pour les serveurs qui coupent la connexion au bout de 2Mo par ex.)
+- Ajout de filtre de selection pour la construction de playlist
+
+#### Auto-Update
+
+- detecte la version local et la version venant du github
+- possibilité de forcer la MAJ
