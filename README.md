@@ -33,6 +33,7 @@ Derniere version: 0.2.0a
 - Télécharge les playlists au format M3U
 - Force la construction de playlists grace au JSON du serveur distant. ( Utile pour les serveurs qui coupent la connexion au bout de 2Mo par ex.)
 - Ajout de filtre de selection pour la construction de playlist
+- ajout de multi filtres de selection ( 18/11/2021 )
 
 #### Auto-Update
 
